@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import CommonHeader from "./components/header/header";
 import CommonFooter from "./components/footer/footer";
 import { Button, Layout, Icon, Input, Tabs, List, Avatar, Badge } from "antd";
-import "antd/dist/antd.css";
 import "./App.css";
 
 const { Header, Footer, Content, Sider } = Layout;
