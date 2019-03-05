@@ -1,0 +1,62 @@
+.textAlign{
+  text-align: center
+}
+
+.ant-layout-header{
+  background-color: #2c2c2c
+}
+
+.height60{
+  height: 60px;
+}
+.height140{
+  height: 140px
+}
+.width230{
+  width: 230px;
+  margin-top: 8px;
+}
+
+.ant-menu li{
+  height: 60px;
+  line-height: 60px;
+}
+
+.ant-layout-sider{
+  width: 300px !important;
+  flex: 0 0 300px !important;
+  max-width: 00px !important;
+  min-width: 300px !important;
+  background-color: #f1f1f1
+}
+
+.btnSearchWrap{
+  padding: 8px 0 15px 0;
+  background-color: #77a7b0;
+  text-align: center 
+}
+
+.ant-avatar > img{
+  width: 40px;
+  height: 40px;
+}
+
+.ant-list-item-meta-content{
+  text-align: left
+}
+
+.ant-list-item-meta-description{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 180px;
+  white-space: nowrap
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
