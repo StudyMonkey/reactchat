@@ -1,15 +1,22 @@
 import React, { Component } from "react";
 import CommonHeader from "./components/header/header";
 import CommonFooter from "./components/footer/footer";
+import Chat from './components/chat/chat'
+import Search from './components/search/search'
 import { Button, Layout, Icon, Input, Tabs, List, Avatar, Badge } from "antd";
 import "./App.css";
 
 const { Header, Footer, Content, Sider } = Layout;
-const Search = Input.Search;
+
 const TabPane = Tabs.TabPane;
 const Item = List.Item;
 
 class App extends Component {
+
+  state = {
+    init: true
+  }
+
   render() {
     function callback(key) {
       console.log(key);
@@ -43,26 +50,7 @@ class App extends Component {
               </div>
               <Layout>
                 <Sider className="width300">
-                  <div className="btnSearchWrap">
-                    <Button
-                      size="small"
-                      type="primary"
-                      style={{ marginRight: "8px" }}
-                    >
-                      <Icon type="plus" />
-                      创建小组
-                    </Button>
-                    <Button size="small" type="danger">
-                      <Icon type="search" />
-                      查找小组/用户
-                    </Button>
-                    <Search
-                      className="width230"
-                      placeholder="请输入"
-                      onSearch={value => console.log(value)}
-                      enterButton
-                    />
-                  </div>
+                  <Search />
                   <Tabs className="textAlign" defaultActiveKey="1" onChange={callback}>
                     <TabPane
                       title="聊天"
@@ -73,25 +61,7 @@ class App extends Component {
                       }
                       key="1"
                     >
-                      <List
-                        itemLayout="horizontal"
-                        dataSource={data}
-                        renderItem={item => (
-                          <Item arrow="horizontal">
-                            <List.Item.Meta
-                              avatar={
-                                <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-                              }
-                              title={
-                                <a href="https://ant.design">{item.title}</a>
-                              }
-                              description={"描述描述111111111111111111111111"}
-                            />
-                            <Badge style={{ marginTop: "-4px" }} count={1} />
-                            <Icon type="right" />
-                          </Item>
-                        )}
-                      />
+                      <Chat data={ data }/>
                     </TabPane>
                     <TabPane
                       title="我加入的学习小组"
@@ -148,7 +118,13 @@ class App extends Component {
                   </Tabs>
                 </Sider>
                 <Content>
-                  <img src="init.jpg" alt="initPic" />
+                  { !this.state.init ? 
+                    <img src="init.jpg" alt="initPic" /> : 
+                    <div>
+                      1111
+                    </div> 
+                  }
+                  
                 </Content>
               </Layout>
             </Layout>
