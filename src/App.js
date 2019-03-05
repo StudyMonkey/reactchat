@@ -37,7 +37,7 @@ class App extends Component {
           <Header className="height60">
             <CommonHeader />
           </Header>
-          <Content style={{margin: '0 auto'}}>
+          <Content className="marginAuto">
             <Layout>
               <div className="height140">
                 <img src="pp.page2.png" alt="top" />
@@ -154,7 +154,7 @@ class App extends Component {
               </Layout>
             </Layout>
           </Content>
-          <Footer>
+          <Footer className="common_footer">
             <CommonFooter />
           </Footer>
         </Layout>
